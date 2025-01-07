@@ -60,8 +60,8 @@
 
             if (segmentSkipValue && [segmentSkipValue isEqual:@(1)]
                 && ([[jsonDictionary objectForKey:@"category"] isEqual:@"music_offtopic"] ||
-                [[jsonDictionary objectForKey:@"category"] isEqual:@"sponsor" ||
-                [[jsonDictionary objectForKey:@"category"] isEqual:@"interaction")
+                [[jsonDictionary objectForKey:@"category"] isEqual:@"sponsor"] ||
+                [[jsonDictionary objectForKey:@"category"] isEqual:@"interaction"])
                 && self.currentVideoMediaTime >= [[jsonDictionary objectForKey:@"segment"][0] floatValue]
                 && self.currentVideoMediaTime <= ([[jsonDictionary objectForKey:@"segment"][1] floatValue] - 1)) {
 
